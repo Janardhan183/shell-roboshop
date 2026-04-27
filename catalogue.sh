@@ -72,7 +72,7 @@ VALIDATE $? "Enabiling the catalogue"
 
 cp $SCRIPT_DIR/mongo.repo /etc/yum.repos.d/mongo.repo
 VALIDATE $? "Copy mongo repo"
-dnf install mongodb-mongosh -y &>>$LOG_FILE
+dnf install -y mongodb-org-shell &>>$LOG_FILE
 VALIDATE $? "Install Mongodb client"
 mongosh --host $MONGODB_HOST </app/db/master-data.js &>>$LOG_FILE
 VALIDATE $? "Load catalogue products"
