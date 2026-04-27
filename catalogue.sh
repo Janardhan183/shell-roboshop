@@ -44,6 +44,7 @@ if [ $? -ne 0 ] then
 else
    echo -e 
     "user already exist...$Y SKIPPING $N"
+fi
 
 
 mkdir -p /app
